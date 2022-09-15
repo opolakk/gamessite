@@ -1,0 +1,73 @@
+header{
+    margin-top: -10px;
+    display:flex;
+    justify-content: center;
+}
+body{
+    font-family:"Sora", sans-serif;
+    background-color: #673ee6;
+
+}
+.container{
+    display:flex;
+    flex-flow: wrap row;
+   justify-content: center;
+}
+
+.cos{
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    display:flex;
+    width: 350px;
+    height:350px;
+    border-style: solid;
+    border-width: 2px;
+    margin-left:20px;
+    margin-top:60px;
+    margin-bottom:10px;
+    margin-right:10px;
+}
+.menu {
+    width: 520px;
+    margin: 0 auto;
+  }
+  .menu ul{
+    list-style:none;
+    margin-top:2%;
+  }
+  .menu ul li{
+    width:140px;
+    height:45px;
+    line-height: 45px;
+    flex-direction: row;
+    display:inline-block;
+    text-align: center;
+    background-color:#fc5185;
+    margin: -20px 5px 0px 0px;
+    color: black;
+    font-size: 14px;
+    border-radius:40px;
+    box-shadow: 0px 2px 3px black;
+  
+  }
+  a:active {
+    color: black;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+   }
+  
+  
+  .menu ul li:hover {
+    background-color: white;
+  }
+  h1 {
+    font-family: "Sora", sans-serif;
+    text-align: center;
+  }
+  h1:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+  }
