@@ -24,6 +24,7 @@
       #score {
         text-align: center;
         font-size: 140px;
+        color:white;
       }
     </style>
   </body>
@@ -31,8 +32,8 @@
   <script>
     const board_border = 'black';
     const board_background = "white";
-    const snake_col = 'lightblue';
-    const snake_border = 'darkblue';
+    const snake_col = 'lightgreen';
+    const snake_border = 'black';
     
     let snake = [
       {x: 200, y: 200},
@@ -91,7 +92,7 @@
     }
 
     function drawFood() {
-      snakeboard_ctx.fillStyle = 'lightgreen';
+      snakeboard_ctx.fillStyle = 'yellow';
       snakeboard_ctx.strokestyle = 'darkgreen';
       snakeboard_ctx.fillRect(food_x, food_y, 10, 10);
       snakeboard_ctx.strokeRect(food_x, food_y, 10, 10);
@@ -102,7 +103,7 @@
 
       // kolor snake
       snakeboard_ctx.fillStyle = snake_col;
-      // border color snake
+      // border kolor snake
       snakeboard_ctx.strokestyle = snake_border;
       snakeboard_ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
       snakeboard_ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);

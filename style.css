@@ -21,12 +21,13 @@ body{
     display:flex;
     width: 350px;
     height:350px;
-    border-style: solid;
-    border-width: 2px;
     margin-left:20px;
     margin-top:60px;
     margin-bottom:10px;
     margin-right:10px;
+}
+.gierka{
+  margin-top:5px;
 }
 .menu {
     width: 520px;
