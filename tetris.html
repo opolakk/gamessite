@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>tetris</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap"
+      rel="stylesheet"
+    />
+<style>
+    body{
+        background-color: #252526;
+    }
+    .tetrisboard{position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    #score{
+        color:white;
+        text-align: center;
+        font-size: 140px;
+        text-shadow: 5px 5px 0px rgba(66, 68, 90, 1);
+    }
+    .points{
+        color:white;
+        text-align: center;
+        font-size: 40px;
+        text-shadow: 5px 5px 0px rgba(66, 68, 90, 1);
+    }
+</style>
+</head>
+    <body>
+
+    <div class="points">Twoje Punkty:</div>
+    <div id="score">0</div>
+    <canvas id="tetrisboard" width="400" height="600"></canvas>
+
+
+
+    <script>
+    const board_border = 'black';
+    const board_background = "white";
+
+    const tetrisboard = document.querySelector("#tetrisboard");
+    const tetrisboard_ctx = tetrisboard.getContext("2d");
+    
+        let score=0;
+
+
+    // border dookola canvasa
+    function clear_board() {
+      tetrisboard_ctx.fillStyle = board_background;
+      //  color bordera canvasa
+      tetrisboard_ctx.strokestyle = board_border;
+      tetrisboard_ctx.fillRect(0, 0, tetrisboard.width, tetrisboard.height);
+      // ramka dookola canvasa
+      tetrisboard_ctx.strokeRect(0, 0, tetrisboard.width, tetrisboard.height);
+    }
+    
+    </script>
+
+</body> 
+</html>

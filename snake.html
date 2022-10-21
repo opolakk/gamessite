@@ -8,13 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
-
-    <div id="score">0</div>
-    <canvas id="snakeboard" width="400" height="400"></canvas>
-
     <style>
+      body{
+        background-color: #252526;
+      }
       #snakeboard {
         position: absolute;
         top: 50%;
@@ -25,8 +22,29 @@
         text-align: center;
         font-size: 140px;
         color:white;
+        text-shadow: 5px 5px 0px rgba(66, 68, 90, 1);
+      }
+      .points{
+        color:white;
+        text-align: center;
+        font-size: 40px;
+        text-shadow: 5px 5px 0px rgba(66, 68, 90, 1);
+    }
+      .playagain{
+        color:white;
+        text-align: center;
+        font-size: 40px;
+        text-shadow: 5px 5px 0px rgba(66, 68, 90, 1);
       }
     </style>
+</head>
+<body>
+    <div class="points">Twoje Punkty:</div>
+    <div id="score">0</div>
+    <canvas id="snakeboard" width="400" height="400"></canvas>
+    <div class="playagain"><a href="snake.html"></a></div>
+
+    
   </body>
 
   <script>
@@ -51,8 +69,9 @@
     let dy = 0;
     
     
-    const snakeboard = document.getElementById("snakeboard");
+    const snakeboard = document.querySelector("#snakeboard");
     const snakeboard_ctx = snakeboard.getContext("2d");
+
     // zacznij gre
     main();
 
@@ -110,6 +129,7 @@
     }
 
     function has_game_ended() {
+      
       for (let i = 4; i < snake.length; i++) {
         if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) return true
       }
@@ -118,6 +138,7 @@
       const hitToptWall = snake[0].y < 0;
       const hitBottomWall = snake[0].y > snakeboard.height - 10;
       return hitLeftWall || hitRightWall || hitToptWall || hitBottomWall
+      
     }
 
     function random_food(min, max) {
@@ -179,13 +200,13 @@
         // dodaje punkty
         score += 1;
         // pokazuje punkty na ekranie
-        document.getElementById('score').innerHTML = score;
+        document.querySelector("#score").innerHTML = score;
         gen_food();
       } else {
         snake.pop();
       }
     }
     
-  </script
+  </script>
 
 </html>
