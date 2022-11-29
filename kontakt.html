@@ -2,41 +2,121 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>kontakt</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Sora:wght@700&display=swap"
       rel="stylesheet"
     />
+    <title>Kontakt</title>
+    <style>
+    
+h1{
+  margin-bottom: 20px;
+}
+body{
+    margin-top:10px;
+    display: grid;
+    place-items:center;
+    font-family:"Sora", sans-serif;
+    background-color: white;
+    background-image: url(tlo.jpg);;
+}
+
+.contact{
+  margin-top: 150px;
+    background: #eee;
+    padding:2rem 1rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius:20px;
+    width:90%;
+    max-width: 1000px;
+    box-shadow: 0px 3px 20px black;
+}
+
+.contact img{
+    max-width:600px;
+    max-height: 400px;
+}
+
+.contact form{
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button{
+    padding:5px 10px;
+    outline: none;
+    border: none;
+    margin:.5rem 0;
+    border-radius:10px;
+    color:#41295a;
+    font-size:15px;
+    
+}
+form input:hover{
+  transform: scale(1.05);
+  transition: transform 0.6s;
+    
+}
+form textarea:hover{
+  transform: scale(1.05);
+  transition: transform 0.6s;
+    
+}
+
+form input, form button{
+    height:40px;
+}
+
+form button{
+    background: #fc5185;
+    color:#fff;
+    font-size:16px;
+    font-weight:bolder;
+    cursor: pointer;
+    margin-top:1rem;
+    box-shadow: 0px 2px 4px black;
+}
+form button:hover{
+  transform: scale(1.1);
+  transition: transform 0.8s;
+}
+
+@media screen and (max-width: 940px) {
+    .contact img{
+        display:none;
+    }
+}
+    </style>
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">Gamessite</a></h1>
-      </header>
+  <header>
+    <h1><a href="index.html">Gamessite</a></h1>
+  </header>
 <nav>
-    <div class="menu">
-        <nav>
-          <ul>
-            <li><a href="index.html">Strona główna</a></li>
-            <li><a href="gry.html">Gry</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </nav>
-        </div>
+<div class="menu">
+    <nav>
+      <ul>
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="gry.html">Gry</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="login.php">Logowanie</a></li>
+      </ul>
+    </nav>
+    </div>
 </nav>
-<br>
-<br>
-<main>
-<div class="container">
-   
-  
-</div>
-</main>
-
-<footer>
-    
-
-
-</footer>
-
+    <div class="contact">
+        <img src="kontakt.svg" alt="Contact">
+        <form action="">
+            <input type="text" name="name" placeholder="Imię i nazwisko">
+            <input type="email" name="email" placeholder="E-mail">
+            <textarea name="message" cols="30" rows="5"></textarea>
+            <button type="submit">Wyślij</button>
+        </form>
+    </div>
+</body>
 </html>
